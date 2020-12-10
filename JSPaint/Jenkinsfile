@@ -1,10 +1,8 @@
 pipeline {
     agent any
+    tools {
+    nodejs 'node-10.15.1'
     }
-    environment {
-        CI = 'true' 
-    }
-
     stages {
         stage('Dependencies') {
             steps {
