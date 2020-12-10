@@ -1,12 +1,16 @@
 pipeline {
     agent {
         docker {
-            image 'node:14-alpine'
-        }
+            image 'node:6-alpine'
+            args '-p 3000:3000'
+        } 
+    }
+    environment {
+        CI = 'true' 
     }
 
     stages {
-        stage('Dependencie') {
+        stage('Dependencies') {
             steps {
                 sh 'npm i'
             }
@@ -20,7 +24,6 @@ pipeline {
             steps {
                 sh 'npm run lint'
                 sh 'npm test'
-
             }  
         }
 
