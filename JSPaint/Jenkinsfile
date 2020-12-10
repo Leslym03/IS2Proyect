@@ -4,9 +4,7 @@ pipeline {
             image 'node:20-alpine'
         }
     }
-    environment {
-        CI = 'true' 
-    }
+
 
     stages {
         stage('Dependencies') {
