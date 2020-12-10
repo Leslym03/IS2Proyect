@@ -1,8 +1,13 @@
 pipeline {
-    agent any
-    tools {
-    nodejs 'node-10.15.1'
+    agent {
+        docker {
+            image 'node:20-alpine'
+        }
     }
+    environment {
+        CI = 'true' 
+    }
+
     stages {
         stage('Dependencies') {
             steps {
