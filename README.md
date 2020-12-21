@@ -34,6 +34,29 @@
 - Para el Proyecto, implementar um pipeline de CI/CD en Jenkins: 
   El codigo se puede ver en el archivo [Jenkinsfile](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/Jenkinsfile) 
   ```
+  pipeline {
+    agent any
+
+    stages {
+        stage('Dependencies') {
+            steps {
+                sh 'npm i'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'npm run make'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'npm run lint'
+                sh 'npm test'
+            }  
+        }
+
+    }
+  }
   
   ```
   El pipeline contiene las siguientes tareas:
