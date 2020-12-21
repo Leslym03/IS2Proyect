@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Dependencies') {
             steps {
-                sh 'npm init'
                 sh 'npm i'
             }
         }
