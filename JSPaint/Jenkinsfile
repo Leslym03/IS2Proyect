@@ -6,7 +6,6 @@ pipeline {
             steps {
                 sh 'npm init'
                 sh 'npm i'
-                sh 'npm ci'
             }
         }
         stage('Build') {
