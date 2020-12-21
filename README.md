@@ -221,7 +221,11 @@ http://localhost:9000
 Para realizar las pruebas tanto unitarias como funcionales se utilizo la herramienta **Cypress** ya que es un framework incluye librerías de aserciones, de mocks y pruebas e2e automáticas sin utilizar Selenium. Detrás de Cypress se ejecuta un proceso Node que constantemente se comunica, sincroniza y ejecuta tareas, teniendo acceso tanto a la parte front como a la parte back de la aplicación y respondiendo a los eventos en tiempo real.
 
 Primero se identifico los casos de prueba, los cuales se encuentra en un [Excel](https://docs.google.com/spreadsheets/d/1eWlFOBNvzTJae3vXMyRuuX7Wi5z7oQF6J-DPbBsw-vE/edit?usp=sharing) en el cual se dividen en las secciones:
-- Tool test
+
+#### Tool test
+En donde se probaran las herramientas Brush Tool, Ellipse Tool, Eraser Tool, Line Tool, Pencil Tool, Rectangle Tool y Rounded Rectangle Tool, las [imagenes](https://github.com/Leslym03/IS2Proyect/tree/main/JSPaint/cypress/snapshots/tool-tests.spec.js) de las pruebas de Tool test. 
+
+![Test1](https://github.com/Leslym03/IS2Proyect/blob/main/img/test1.png)
 
 ```javascript
 /// <reference types="Cypress" />
@@ -404,7 +408,10 @@ context('tool tests', () => {
 });
 ```
 
-- Visual test
+#### Visual test
+En donde se probaran las vistas al momento una accion dentro de la aplicacion. Las [imagenes](https://github.com/Leslym03/IS2Proyect/tree/main/JSPaint/cypress/snapshots/visual-tests.spec.js) de las pruebas de Visual test. 
+
+![Test2](https://github.com/Leslym03/IS2Proyect/blob/main/img/test2.png)
 
 ```javascript
 /// <reference types="Cypress" />
@@ -433,7 +440,7 @@ context('visual tests', () => {
 	};
 ```
 
-  - Selection
+- **Selection**: Realiza pruebas al momento de seleccionar una herramienta como brush, select, magnifier, airbrush, eraser, line y rectangle
 
 ```javascript
 
@@ -474,7 +481,7 @@ context('visual tests', () => {
 	});
 ```
 
-  - Window
+- **Window**: Realiza pruebas sobre las ventanas emergentas al seleccionar algun objeto de menu.
   
   
 ```javascript
@@ -522,7 +529,7 @@ beforeEach(()=> {
 	});
 ```
 
-  - Mode and Theme
+- **Mode and Theme**: Realiza pruebas sobre un tema o modo dentro de la aplicacion como modern o winter.
   
 ```javascript
 it('eye gaze mode', () => {
