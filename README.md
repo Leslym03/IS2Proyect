@@ -148,7 +148,8 @@
 }
 ```
   
-  - Analisis Estatico: La herramienta a usa es SonarQube
+  - Analisis Estatico: La herramienta a usa es SonarQube y El codigo se puede ver en el archivo [Jsonar-project.properties]
+    (https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/sonar-project.properties) 
   
   
   - Pruebas Unitarias:
