@@ -207,7 +207,8 @@
             <img width="50%" height="30%" src="https://github.com/Leslym03/IS2Proyect/blob/main/img/c.PNG">
          </p>          
        
-      - Visualizar resultados de SonarScanner en SonarQube:http://localhost:9000
+      - Visualizar resultados de SonarScanner en SonarQube: en este [PDF](https://drive.google.com/file/d/1Y6Zu-l-tHfvnWwEoWcqtWyengG05MMyT/view?usp=sharing)<br/>  
+        http://localhost:9000
        </p>   
        <p align="center">
          <img width="60%" height="50%" src="https://github.com/Leslym03/IS2Proyect/blob/main/img/d.PNG">
