@@ -10,7 +10,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm start'
-                sh 'npm run make'
             }
         }
         stage('Test') {
