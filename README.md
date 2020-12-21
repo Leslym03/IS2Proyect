@@ -32,7 +32,7 @@
 
 
 - Para el Proyecto, implementar um pipeline de CI/CD en Jenkins: 
-  El codigo se puede ver en el archivo [Jenkinsfile](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/Jenkinsfile) 
+  El codigo se puede ver en el archivo [Jenkinsfile](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/Jenkinsfile) gfg
   ```
   
   ```
