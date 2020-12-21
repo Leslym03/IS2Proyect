@@ -33,6 +33,9 @@ Usar Git, GitHub o GitLab como repositório de Código Fuente: Se creo un [repos
 
 ## Pipeline Jenkins
 Para el Proyecto, implementar um pipeline de CI/CD en Jenkins: El codigo se puede ver en el archivo [Jenkinsfile](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/Jenkinsfile) 
+
+![Jenkins](https://github.com/Leslym03/IS2Proyect/blob/main/img/jenkins.png)
+
   ```
 pipeline {
     agent any
