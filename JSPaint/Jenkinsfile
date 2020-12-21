@@ -15,9 +15,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'cd JSPaint && npm i' 
-                sh 'cd JSPaint && npm ci'
-                sh 'cd JSPaint && npm run accept'
+                sh 'cd JSPaint && npm i && npm ci && npm run accept'
             }  
         }
 
