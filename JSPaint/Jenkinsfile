@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh 'cd JSPaint'
                 sh 'npm i'
+                sh 'npm ci'
             }
         }
         stage('Build') {
