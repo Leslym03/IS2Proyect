@@ -611,7 +611,18 @@ it('eye gaze mode', () => {
 });
 
 ```
+
+### Resultados de Pruebas
+
+Se ejecuto el codigo de pruebas unitarias y funcionales presentado anteriormente, donde los resultados se mostraran a travez de las siguientes capturas de pantalla que se tomo a la consola.
+
+![consola1](https://github.com/Leslym03/IS2Proyect/blob/main/img/consola1.png)
+![consola2](https://github.com/Leslym03/IS2Proyect/blob/main/img/consola2.png)
+![consola3](https://github.com/Leslym03/IS2Proyect/blob/main/img/consola3.png)
+![consola4](https://github.com/Leslym03/IS2Proyect/blob/main/img/consola4.png)
+![consola5](https://github.com/Leslym03/IS2Proyect/blob/main/img/consola5.png)
+![consola6](https://github.com/Leslym03/IS2Proyect/blob/main/img/consola6.png)
   
   
-### Despliegue Automatico:
+### Despliegue Automatico
   
