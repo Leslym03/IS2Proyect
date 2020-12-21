@@ -150,6 +150,10 @@
   
   - Analisis Estatico: La herramienta a usa es SonarQube .
      - Ejecutar SonarQube localmente
+       </p>   
+       <p align="center">
+         <img width="40%" height="30%" src="https://github.com/Leslym03/IS2Proyect/blob/main/img/a.PNG">
+       </p> 
      - Ejecutar SonarScanner
        - Cree un archivo de configuración en el directorio raíz del proyecto: 
          [sonar-project.properties](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/sonar-project.properties)
@@ -171,9 +175,20 @@
          #sonar.sourceEncoding=UTF-8
          ```
        - Ejecute el siguiente comando desde el directorio base del proyecto para iniciar el análisis: ```sonar-scanner.bat```
-       - Visualizar resultados de SonarScanner en SonarQube: http://localhost:9000
+         </p>   
+         <p align="center">
+            <img width="50%" height="30%" src="https://github.com/Leslym03/IS2Proyect/blob/main/img/b.PNG">
+         </p> 
+         </p>   
+         <p align="center">
+            <img width="50%" height="30%" src="https://github.com/Leslym03/IS2Proyect/blob/main/img/c.PNG">
+         </p>          
        
-      - Visualizar resultados de SonarScanner en SonarQube:
+      - Visualizar resultados de SonarScanner en SonarQube:http://localhost:9000
+       </p>   
+       <p align="center">
+         <img width="60%" height="50%" src="https://github.com/Leslym03/IS2Proyect/blob/main/img/d.PNG">
+       </p> 
   
   - Pruebas Unitarias:
   
