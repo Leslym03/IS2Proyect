@@ -9,7 +9,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'npm run dev'
+                sh 'npm start'
+                sh 'npm run make'
             }
         }
         stage('Test') {
