@@ -4,18 +4,20 @@ pipeline {
     stages {
         stage('Dependencies') {
             steps {
+                sh 'npm init'
                 sh 'npm i'
                 sh 'npm ci'
             }
         }
         stage('Build') {
             steps {
-                sh 'npm run test:start-server & sleep 3'
+                sh 'npm run dev'
             }
         }
         stage('Test') {
             steps {
-                sh 'npm run lint && npm run cy:run'
+                sh 'npm test'
+                sh 'npm run accept'
             }  
         }
 
