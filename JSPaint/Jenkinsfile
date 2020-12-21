@@ -9,13 +9,13 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'cd JSPaint && npm run test:start-server && sleep 3'
+                sh 'cd JSPaint && npm run make'
                 
             }
         }
         stage('Test') {
             steps {
-                sh 'cd JSPaint && npm test && npm run accept'
+                sh 'cd JSPaint && npm run accept'
             }  
         }
 
