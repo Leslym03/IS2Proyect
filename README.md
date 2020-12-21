@@ -32,7 +32,7 @@
 
 
 - Para el Proyecto, implementar um pipeline de CI/CD en Jenkins: 
-  El codigo se puede ver en el archivo [Jenkinsfile](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/Jenkinsfile) gfg
+  El codigo se puede ver en el archivo [Jenkinsfile](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/Jenkinsfile) 
   ```
   
   ```
@@ -148,9 +148,28 @@
 }
 ```
   
-  - Analisis Estatico: La herramienta a usa es SonarQube y El codigo se puede ver en el archivo [Jsonar-project.properties]
-    (https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/sonar-project.properties) 
-  
+  - Analisis Estatico: La herramienta a usa es SonarQube y El codigo se puede ver en el archivo 
+     - Cree un archivo de configuración en el directorio raíz del proyecto: 
+       [sonar-project.properties](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/sonar-project.properties)
+       ```
+       # must be unique in a given SonarQube instance
+       sonar.projectKey=JSPaint
+       # --- optional properties ---
+       # defaults to project key
+       #sonar.projectName=JSPaint
+       # defaults to 'not provided'
+       #sonar.projectVersion=1.0
+       
+       # Path is relative to the sonar-project.properties file. Defaults to .
+       sonar.sources=.
+       sonar.exclusions=*.gitignore, *.git
+       
+       # Encoding of the source code. Default is default system encoding
+       
+       #sonar.sourceEncoding=UTF-8
+       ```
+      - Ejecute el siguiente comando desde el directorio base del proyecto para iniciar el análisis: ```sonar-scanner.bat```
+      - Visualizar resultados de SonarScanner en SonarQube: http://localhost:9000
   
   - Pruebas Unitarias:
   
