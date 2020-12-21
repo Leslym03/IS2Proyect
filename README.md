@@ -1,44 +1,45 @@
 # IS2 Proyecto Final
 ## Proyecto Final: Arquitectura de Integración Continua
-Implantar un entorno de construcción automática de software utilizando prácticas de integración continua (CI/CD):
+### Implantar un entorno de construcción automática de software utilizando prácticas de integración continua (CI/CD):
 
-## Proyecto de Software 
-Usar un proyecto de software (preferentemente una web app o mobile app) relativamente complejo y popular disponible en GitHub: Se uso el proyecto [JSpaint](https://github.com/1j01/jspaint) es un remake de Paint basado en web y aplicacion de escritorio, incluye características poco conocidas ), mejorarlo y ampliar los tipos de imágenes que puede editar. Sus caracteristicas mas resaltantes son:
-- Multiplataforma
-- Undos / redos ilimitados
-- El historial de deshacer no es lineal
-- Mantiene una copia de seguridad 
-- Edita imágenes transparentes
-- Cambia de temas (modo oscuro)
-- Modo Cuadro de color vertical 
-- Modo Eye Gaze
-- Modo de reconocimiento de voz
-- Crea un GIF animado a partir del historial
-- Posee estilo Asteroids
-- Puede recortar la imagen
-- Atajos de teclado para rotación
-- Zoom a una escala arbitraria
-- Relleno no contiguo
-- Corrector ortográfico
-- Soporte rudimentario para múltiples usuarios
-- Carga muchos formatos de paleta diferentes
-- Soporte táctil
+- Usar un proyecto de software (preferentemente una web app o mobile app) relativamente complejo y popular disponible en GitHub :
+  Se uso el proyecto [JSpaint](https://github.com/1j01/jspaint) es un remake de Paint basado en web y aplicacion de escritorio, incluye características poco conocidas ), mejorarlo y ampliar los tipos de imágenes que puede editar. Sus caracteristicas mas resaltantes son:
+  - Multiplataforma
+  - Undos / redos ilimitados
+  - El historial de deshacer no es lineal
+  - Mantiene una copia de seguridad 
+  - Edita imágenes transparentes
+  - Cambia de temas (modo oscuro)
+  - Modo Cuadro de color vertical 
+  - Modo Eye Gaze
+  - Modo de reconocimiento de voz
+  - Crea un GIF animado a partir del historial
+  - Posee estilo Asteroids
+  - Puede recortar la imagen
+  - Atajos de teclado para rotación
+  - Zoom a una escala arbitraria
+  - Relleno no contiguo
+  - Corrector ortográfico
+  - Soporte rudimentario para múltiples usuarios
+  - Carga muchos formatos de paleta diferentes
+  - Soporte táctil
   
-## Repositorio  
-Usar Git, GitHub o GitLab como repositório de Código Fuente: Se creo un [repositorio en Github](https://github.com/Leslym03/IS2Proyect) con nos colaboradores que son las integrantes del grupo:
-- Lesly Mita Yagua [Lesly M](https://github.com/Leslym03)
-- Kemely Castillo Caccire [kemely2018](https://github.com/kemely2018)
+  
+- Usar Git, GitHub o GitLab como repositório de Código Fuente.
+  Se creo un [repositorio en Github](https://github.com/Leslym03/IS2Proyect) con nos colaboradores que son las integrantes del grupo:
+  - Lesly Mita Yagua [Lesly M](https://github.com/Leslym03)
+  - Kemely Castillo Caccire [kemely2018](https://github.com/kemely2018)
 
-## Pipeline Jenkins
-Para el Proyecto, implementar um pipeline de CI/CD en Jenkins: El codigo se puede ver en el archivo [Jenkinsfile](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/Jenkinsfile) 
+
+- Para el Proyecto, implementar um pipeline de CI/CD en Jenkins: 
+  El codigo se puede ver en el archivo [Jenkinsfile](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/Jenkinsfile) 
   ```
   
   ```
-El pipeline contiene las siguientes tareas:
+  El pipeline contiene las siguientes tareas:
   
 
-### Construccion automatica
-El actual proyecto ya contaba con construccion automatica en [JSON](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/package.json) para Javascript
+  - Construccion automatica: El actual proyecto ya contaba con construccion automatica en [JSON](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/package.json) para Javascript
   
 ```javascript
 {
@@ -147,34 +148,36 @@ El actual proyecto ya contaba con construccion automatica en [JSON](https://gith
 }
 ```
   
-### Analisis Estatico 
-La herramienta a usa es SonarQube y El codigo se puede ver en el archivo 
-- Cree un archivo de configuración en el directorio raíz del proyecto: 
-       [sonar-project.properties](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/sonar-project.properties)
-       ```
-       # must be unique in a given SonarQube instance
-       sonar.projectKey=JSPaint
-       # --- optional properties ---
-       # defaults to project key
-       #sonar.projectName=JSPaint
-       # defaults to 'not provided'
-       #sonar.projectVersion=1.0
+  - Analisis Estatico: La herramienta a usa es SonarQube .
+     - Ejecutar SonarQube localmente
+     - Ejecutar SonarScanner
+       - Cree un archivo de configuración en el directorio raíz del proyecto: 
+         [sonar-project.properties](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/sonar-project.properties)
+         ```
+         # must be unique in a given SonarQube instance
+         sonar.projectKey=JSPaint
+         # --- optional properties ---
+         # defaults to project key
+         #sonar.projectName=JSPaint
+         # defaults to 'not provided'
+         #sonar.projectVersion=1.0
+         
+         # Path is relative to the sonar-project.properties file. Defaults to .
+         sonar.sources=.
+         sonar.exclusions=*.gitignore, *.git
        
-       # Path is relative to the sonar-project.properties file. Defaults to .
-       sonar.sources=.
-       sonar.exclusions=*.gitignore, *.git
+         # Encoding of the source code. Default is default system encoding
        
-       # Encoding of the source code. Default is default system encoding
+         #sonar.sourceEncoding=UTF-8
+         ```
+       - Ejecute el siguiente comando desde el directorio base del proyecto para iniciar el análisis: ```sonar-scanner.bat```
+       - Visualizar resultados de SonarScanner en SonarQube: http://localhost:9000
        
-       #sonar.sourceEncoding=UTF-8
-       ```
-       
-- Ejecute el siguiente comando desde el directorio base del proyecto para iniciar el análisis: ```sonar-scanner.bat```
-- Visualizar resultados de SonarScanner en SonarQube: http://localhost:9000
+      - Visualizar resultados de SonarScanner en SonarQube:
   
-### Pruebas Unitarias:
+  - Pruebas Unitarias:
   
-### Pruebas Funcionales:
+  - Pruebas Funcionales:
   
-### Despliegue Automatico:
+  - Despliegue Automatico:
   
