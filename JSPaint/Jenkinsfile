@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Dependencies') {
             steps {
-                sh 'cd JSPaint && npm i'
+                sh 'cd JSPaint && npm i && npm ci'
             }
         }
         stage('Build') {
