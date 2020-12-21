@@ -34,30 +34,29 @@ Usar Git, GitHub o GitLab como repositório de Código Fuente: Se creo un [repos
 ## Pipeline Jenkins
 Para el Proyecto, implementar um pipeline de CI/CD en Jenkins: El codigo se puede ver en el archivo [Jenkinsfile](https://github.com/Leslym03/IS2Proyect/blob/main/JSPaint/Jenkinsfile) 
   ```
-  pipeline {
+pipeline {
     agent any
 
     stages {
         stage('Dependencies') {
             steps {
-                sh 'npm i'
+                sh 'cd JSPaint && npm i && npm ci'
             }
         }
         stage('Build') {
             steps {
-                sh 'npm run make'
+                sh 'cd JSPaint && npm run build-css && npm run make'
+                
             }
         }
         stage('Test') {
             steps {
-                sh 'npm run lint'
-                sh 'npm test'
+                sh 'cd JSPaint && npm run lint && npm test && npm run accept'
             }  
         }
 
     }
-  }
-  
+}
   ```
   El pipeline contiene las siguientes tareas:
   
@@ -623,6 +622,4 @@ Se ejecuto el codigo de pruebas unitarias y funcionales presentado anteriormente
 ![consola5](https://github.com/Leslym03/IS2Proyect/blob/main/img/consola5.png)
 ![consola6](https://github.com/Leslym03/IS2Proyect/blob/main/img/consola6.png)
   
-  
-### Despliegue Automatico
-  
+
